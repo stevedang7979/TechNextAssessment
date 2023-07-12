@@ -98,7 +98,7 @@ export default function Tabs() {
 
                 </div>
                 <div className="tab-pane fade" id="result-tab-pane" role="tabpanel" aria-labelledby="result-tab" tabIndex="0">
-                    <div>{
+                    {searchClicked ? <>                    <div>{
                         loading &&
                         <div className="d-flex justify-content-center mt-3">
                             <div className="spinner-border" role="status">
@@ -107,14 +107,15 @@ export default function Tabs() {
                         </div>
                     }
                     </div>
-                    <div>
-                        {
-                            loading == false &&
-                            <div>
-                                <Table columns={columns} dataSource={currentResult} />
-                            </div>
-                        }
-                    </div>
+                        <div>
+                            {
+                                loading == false &&
+                                <div>
+                                    <Table columns={columns} dataSource={currentResult} />
+                                </div>
+                            }
+                        </div></> : <p>Please enter your term!</p>}
+
                 </div>
                 <div className="tab-pane fade" id="plot-tab-pane" role="tabpanel" aria-labelledby="plot-tab-pane" tabIndex="0">
                     <LineChart />
