@@ -28,7 +28,7 @@ export function BarChart() {
 
     useEffect(() => {
 
-        axios.get(`https://testtechnext1-pearl118.b4a.run/search/api/phases`)
+        axios.get(`https://proxy-server-tau-fawn.vercel.app/testtechnext1-pearl118.b4a.run/search/api/phases`)
         .then(res => {
             let result = res.data;
             let newdata = [];
