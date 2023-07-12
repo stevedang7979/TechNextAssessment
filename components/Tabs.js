@@ -1,8 +1,8 @@
 import styles from '../styles/Home.module.css';
 import React, { useState, useEffect } from 'react';
 import { Space, Table, Tag } from 'antd';
-import { LineChart } from '../components/LineChart';
-import { BarChart } from '../components/BarChart';
+import { LineChart } from './LineChart';
+import { BarChart } from './BarChart';
 
 export default function Tabs() {
     const [query, setQuery] = useState('');
