@@ -38,7 +38,7 @@ export default function Tabs() {
     //fetch search API
     async function searchAPI(key) {
         try {
-            let uri = "https://testtechnext1-pearl118.b4a.run/search/api/query/?query=" + key
+            let uri = "https://proxy-server-tau-fawn.vercel.app/testtechnext1-pearl118.b4a.run/search/api/query/?query=" + key
             const response = await fetch(uri, {
                 method: "GET",
             });
